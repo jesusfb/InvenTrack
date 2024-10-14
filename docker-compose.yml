@@ -1,0 +1,35 @@
+services:
+  db:
+    image: postgres:13
+    container_name: postgres-invenTrack
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: inventrack_db
+      POSTGRES_USER: inventrack_user
+      POSTGRES_PASSWORD: inventrack_pass
+    ports:
+      - "5432:5432"
+      
+  web:
+    build: .
+    container_name: invenTrack
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin-invenTrack
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@inventrack.com
+      PGADMIN_DEFAULT_PASSWORD: admin123
+    ports:
+      - "5050:80"
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:
