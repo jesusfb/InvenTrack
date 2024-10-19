@@ -14,7 +14,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Exponer el puerto 8000 para el servidor de desarrollo de Django
-EXPOSE 8000
+EXPOSE 80
 
 # Ejecutar el servidor de desarrollo (o usar gunicorn para producción)
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:80"]
