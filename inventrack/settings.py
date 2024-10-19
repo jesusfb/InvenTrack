@@ -97,10 +97,10 @@ WSGI_APPLICATION = "inventrack.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "inventrack",  # El nombre de la base de datos
-        "USER": "root",  # Tu usuario de base de datos
-        "PASSWORD": "5NXAYza2eLDebmVTezRV",  # La contraseña del usuario
-        "HOST": os.getenv("HOST"),   # O la IP o nombre del contenedor de la base de datos
+        "NAME": "neondb",  # El nombre de la base de datos
+        "USER": "neondb_owner",  # Tu usuario de base de datos
+        "PASSWORD": "TwxUv53FjVCy",  # La contraseña del usuario
+        "HOST": "ep-tiny-grass-a6z9ostc.us-west-2.aws.neon.tech",   # O la IP o nombre del contenedor de la base de datos
         "PORT": "5432",        # El puerto por el que PostgreSQL está escuchando
     }
 }
