@@ -12,8 +12,6 @@ class GatewaysInventory:
         self.inventory_repository =Inventory()
         self.products_repository =Productos()
 
-        
-
     def get_inventorys(self)->List[EntitiesInventory]:
         orm_invetorys = self.inventory_repository.get_inventorys()
         inventorys = []

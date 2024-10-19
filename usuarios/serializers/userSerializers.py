@@ -28,8 +28,24 @@ class UserInfoRegisterSerializer(serializers.Serializer):
 
 
 
-# Serializer para obtener detalles del usuario autenticado
-class UserSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = User
-        fields = ['id', 'username', 'email']
+# class UserSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = User  # Especificas el modelo a serializar
+#         fields = ['id', 'first_name', 'last_name', 'email', 'country']  # Campos a incluir en la serialización
+#
+
+class RolSerielizers(serializers.Serializer):
+    # id = serializers.IntegerField()
+    nombre = serializers.CharField()
+
+
+#
+class UserSerializer(serializers.Serializer):
+    users_id = serializers.IntegerField()
+    first_name = serializers.CharField()
+    last_name = serializers.CharField()
+    email = serializers.CharField()
+    country = serializers.CharField()
+    cellphone = serializers.CharField()
+    direction = serializers.CharField()
+

@@ -1,5 +1,6 @@
 from rest_framework import serializers
 
+
 class InventoryDataClassSerializer(serializers.Serializer):
     producto = serializers.CharField()
     cantidad = serializers.CharField()

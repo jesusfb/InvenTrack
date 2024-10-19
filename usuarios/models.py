@@ -17,5 +17,5 @@ class Direccion(models.Model):
     telefono = models.CharField(max_length=20)
 
     def __str__(self):
-        return f"{self.direccion}, {self.ciudad}, {self.pais}"
+        return f"{self.direccion}, {self.ciudad}, {self.pais}, {self.telefono}"
 

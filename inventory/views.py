@@ -14,9 +14,6 @@ from .interfaceAdapter.controller.inventoryControl import ControlIventory
 from drf_yasg.utils import swagger_auto_schema
 from drf_yasg import openapi 
 # from vulnerabilities.interface_adapters.dependencies import openapidoc
-
-from rest_framework.permissions import IsAuthenticated
-from rest_framework.decorators import permission_classes
 from inventory.interfaceAdapter.dependencies.logs import logger, logs_register
 # Configuración del logger
 

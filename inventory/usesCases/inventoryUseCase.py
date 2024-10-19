@@ -16,6 +16,7 @@ class InventoryUseCase:
     
     def create_inventory(self, producto:int, cantidad:int,bodega:str)->Inventory:
         return self.inventory_gateways.create_inventory(producto, cantidad, bodega)
-    
+   
     def get_byid_inventory(self,inventory_id:int)->Inventory:
         return self.inventory_gateways.get_byid_inventory(inventory_id)
+
